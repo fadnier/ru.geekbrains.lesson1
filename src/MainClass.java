@@ -54,10 +54,15 @@ public class MainClass {
 
     //8. * Написать метод, который определяет является ли год високосным, и выводит сообщение в консоль. Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
     public static void task8 (int year) {
-        if(year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+        if(task8_2(year)) {
             System.out.println("Год высокосный");
         } else {
             System.out.println("Год не высокосный");
         }
+    }
+
+    //По желанию преподавателя разбил предыдущий метод на 2
+    public static boolean task8_2 (int year) {
+        return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
     }
 }
